@@ -36,7 +36,7 @@ public class Statistics {
     public List<Cyclist> getTeamMembers(String team){
         List<Cyclist> tempList = new ArrayList<>();
         for (Cyclist c : cyclist){
-            if (c.getName().equals(team)){
+            if (c.getTeam().equals(team)){
                 tempList.add(c);
             }
         }
