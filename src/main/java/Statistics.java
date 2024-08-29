@@ -20,13 +20,12 @@ public class Statistics {
     }
 
     public Map<String, String> getTeamsWithMembers(){
-        String memberName = "";
+        String name = "";
+        String teamName = "";
         Map<String, String> tempMap = new HashMap<>();
-        String teamName = getTeams().toString();
-        String name = getTeamMembers(memberName).toString();
-
         for (Cyclist c : cyclist){
-            memberName = c.getName();
+            name = c.getName();
+            teamName = c.getTeam();
         }
 
         tempMap.put(teamName, name);
