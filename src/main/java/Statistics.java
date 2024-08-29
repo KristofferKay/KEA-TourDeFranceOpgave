@@ -26,21 +26,22 @@ public class Statistics {
         for (Cyclist c : cyclist){
             name = c.getName();
             teamName = c.getTeam();
+            tempMap.put(teamName, name);
         }
-
-        tempMap.put(teamName, name);
-
         return tempMap;
     }
 
-    public List<Cyclist> getTeamMembers(String team){
-        List<Cyclist> tempList = new ArrayList<>();
-        for (Cyclist c : cyclist){
-            if (c.getTeam().equals(team)){
-                tempList.add(c);
+
+    public Set<String> getTeamMembers(String team){
+        Set<String> teamMembers = new HashSet<>();
+
+        for (Cyclist c : cyclist) {
+            if (c.getTeam().equals(team)) {
+                teamMembers.add(c.getName());
             }
         }
-        return tempList;
+
+        return teamMembers;
     }
 
 }
