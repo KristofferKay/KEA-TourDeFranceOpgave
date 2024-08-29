@@ -29,9 +29,7 @@ public class TDFFileReader {
 
             String ryderName = ryder[1];
             String teamName = team[2];
-
             Cyclist cyclistObj = new Cyclist(ryderName,teamName);
-
             cyclists.add(cyclistObj);
         }
         return cyclists;
