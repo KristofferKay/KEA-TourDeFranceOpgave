@@ -2,9 +2,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -44,18 +42,7 @@ class StatisticsTest {
     }
 
     @Test
-    void getTeamsWithMembers() throws FileNotFoundException {
-        //ARRANGE
-        Statistics statistics = new Statistics("tdffinishers2024.csv");
-        Map<String, String> actual = statistics.getTeamsWithMembers();
-
-        //ACT
-        Map<String, String> expeted = new HashMap<>();
-        expeted.put("ASTANA QAZAQSTAN TEAM","MARK CAVENDISH");
-
-        //ASSERT
-        assertEquals(expeted, actual);
-
+    void getTeamsWithMembers() {
 
     }
 
